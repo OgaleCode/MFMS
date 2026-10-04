@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <string.h>
+#include "reports.h"
+#include "employees.h"
+#include "budget.h"
+#include "suppliers.h"
+#include "assets.h"
+
+void employeeReport(){
+    if(empCount==0){ printf("No employee data\n"); return; }
+    float total=0, highest=0, lowest=0;
+    int hi=0, lo=0;
+    for(int i=0;i<empCount;i++){
+        float s = calculateSalary(employees[i]);
+        total+=s;
+        if(i==0 || s>highest){ highest=s; hi=i; }
+        if(i==0 || s<lowest){ lowest=s; lo=i; }
+    }
+    printf("\n=== EMPLOYEE REPORT ===\n");
+    printf("Total: %d\nTotal Cost: %.2f\nAverage: %.2f\n", empCount, total, total/empCount);
+    printf("Highest: %s %.2f\nLowest: %s %.2f\n", employees[hi].name, highest, employees[lo].name, lowest);
+}
+
+void budgetReport(){
+    if(budCount==0){ printf("No budget data\n"); return; }
+    float a=0, e=0, r=0;
+    printf("\n=== BUDGET REPORT ===\n");
+    for(int i=0;i<budCount;i++){
+        float rem = calculateRemaining(budgets[i]);
+        a+=budgets[i].allocated; e+=budgets[i].expenditure; r+=rem;
+        printf("%s Rem %.2f %s\n", budgets[i].dept, rem, rem>=0?"WITHIN":"EXCEEDED");
+    }
+    printf("Allocated: %.2f Exp: %.2f Rem: %.2f\n", a, e, r);
+}
+
+void supplierReport(){
+    if(supCount==0){ printf("No supplier data\n"); return; }
+    printf("\n=== SUPPLIER REPORT: %d suppliers ===\n", supCount);
+    for(int i=0;i<supCount;i++) printf("%s - %s (%s)\n", suppliers[i].name, suppliers[i].town, suppliers[i].email);
+}
+
+void assetReport(){
+    if(astCount==0){ printf("No asset data\n"); return; }
+    float v=0;
+    printf("\n=== ASSET REPORT: %d assets ===\n", astCount);
+    for(int i=0;i<astCount;i++){ printf("%s %s %.2f\n", assets[i].id, assets[i].name, assets[i].value); v+=assets[i].value; }
+    printf("Total Value: %.2f\n", v);
+}
+
+void reportMenu(){
+    int ch;
+    do{
+        printf("\n-- Reports (Catherine & Ryan) --\n1.Employee 2.Budget 3.Supplier 4.Asset 5.All 6.Back\nChoice: ");
+        scanf("%d",&ch); getchar();
+        switch(ch){
+            case 1: employeeReport(); break;
+            case 2: budgetReport(); break;
+            case 3: supplierReport(); break;
+            case 4: assetReport(); break;
+            case 5: employeeReport(); budgetReport(); supplierReport(); assetReport(); break;
+        }
+    }while(ch!=6);
+}
