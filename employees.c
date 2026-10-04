@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "employees.h"
 
 #define MAX_EMPLOYEES 50
 
@@ -12,14 +13,6 @@ float employeeHousing[MAX_EMPLOYEES];
 float employeeTransport[MAX_EMPLOYEES];
 
 int employeeCount = 0;
-
-
-/* Function prototypes */
-void addEmployee(void);
-void displayEmployees(void);
-void searchEmployee(void);
-float calculateSalary(float basic, float housing, float transport);
-
 
 /* Add a new employee */
 void addEmployee(void)
