@@ -4,6 +4,7 @@
 
 #define TYPE_COUNT 5
 #define COND_COUNT 4
+int main () {
 
 static char assetIDs[MAX_ASSETS][ID_LEN];
 static char assetNames[MAX_ASSETS][NAME_LEN];
@@ -491,4 +492,6 @@ double getAverageAssetValue(void)
     if (assetCount == 0)
         return 0.0;
     return calculateTotalAssetValue() / assetCount;
+}
+return 0;
 }
