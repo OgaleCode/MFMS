@@ -5,13 +5,13 @@
 ---
 
 ## Group Members & Individual Responsibilities
-* **Student 1 Dylan Esau:** Employee Management Module
-* **Student 2 Hendrina Shifeleni:** Budget Management Module
-* **Student 3 Magdalena Jakob:** Supplier Management Module
-* **Student 4 Ryan Kamolakwamwe:** Asset Management Module
-* **Student 5 Catherine Shiimi:** System Reports Module
-* **Student 6 Katjimune Marry:** Functions, Integration, and Data Validation
-* **Student 7 Elago Niilenge:** Testing, Documentation, and Git Coordination
+* **Student 1 Dylan Esau (220087318):** Employee Management Module
+* **Student 2 Hendrina Shifeleni (226164519):** Budget Management Module
+* **Student 3 Magdalena Jakob (226037967):** Supplier Management Module
+* **Student 4 Ryan Kamolakwamwe (226051625):** Asset Management Module
+* **Student 5 Catherine Shiimi (226094901):** System Reports Module
+* **Student 6 Katjimune Marry (226048373):** Functions, Integration, and Data Validation
+* **Student 7 Elago Niilenge (226016153):** Testing, Documentation, and Git Coordination
 
 ---
 
