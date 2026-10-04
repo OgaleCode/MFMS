@@ -3,7 +3,6 @@
 
 #define MAX_EMPLOYEES 50
 
-/* Employee data */
 int employeeIDs[MAX_EMPLOYEES];
 char employeeNames[MAX_EMPLOYEES][100];
 char employeeDepartments[MAX_EMPLOYEES][100];
@@ -14,7 +13,6 @@ float employeeTransport[MAX_EMPLOYEES];
 
 int employeeCount = 0;
 
-/* Add a new employee */
 void addEmployee(void)
 {
     if (employeeCount >= MAX_EMPLOYEES)
@@ -40,9 +38,7 @@ void addEmployee(void)
         scanf("%f", &employeeBasic[employeeCount]);
 
         if (employeeBasic[employeeCount] < 0)
-        {
             printf("Salary cannot be negative. Please try again.\n");
-        }
 
     } while (employeeBasic[employeeCount] < 0);
 
@@ -52,9 +48,7 @@ void addEmployee(void)
         scanf("%f", &employeeHousing[employeeCount]);
 
         if (employeeHousing[employeeCount] < 0)
-        {
             printf("Housing allowance cannot be negative. Please try again.\n");
-        }
 
     } while (employeeHousing[employeeCount] < 0);
 
@@ -64,9 +58,7 @@ void addEmployee(void)
         scanf("%f", &employeeTransport[employeeCount]);
 
         if (employeeTransport[employeeCount] < 0)
-        {
             printf("Transport allowance cannot be negative. Please try again.\n");
-        }
 
     } while (employeeTransport[employeeCount] < 0);
 
@@ -75,13 +67,11 @@ void addEmployee(void)
     printf("\nEmployee added successfully.\n");
 }
 
-/* Calculate gross employee salary */
 float calculateSalary(float basic, float housing, float transport)
 {
     return basic + housing + transport;
 }
 
-/* Display all employees */
 void displayEmployees(void)
 {
     int i;
@@ -113,7 +103,6 @@ void displayEmployees(void)
     }
 }
 
-/* Search for an employee by ID */
 void searchEmployee(void)
 {
     int searchID;
@@ -156,7 +145,5 @@ void searchEmployee(void)
     }
 
     if (!found)
-    {
         printf("\nEmployee not found.\n");
-    }
 }
