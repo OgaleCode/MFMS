@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "budget.h"
 
 void displayMenu(void);
 float getValidPositiveFloat(const char *promptMessage);
@@ -20,14 +21,12 @@ int main(void) {
 
         switch(choice) {
             case 1:
-                printf("\n--- Employee Management Module ---\n");
+                 printf("\n--- Employee Management Module ---\n");
                 sampleFinancialInput = getValidPositiveFloat("Enter Employee Basic Salary: N$ ");
                 printf("[Validation Success] Saved Valid Salary Amount: N$ %.2f\n", sampleFinancialInput);
                 break;
             case 2:
-                printf("\n--- Budget Management Module ---\n");
-                sampleFinancialInput = getValidPositiveFloat("Enter Departmental Budget Allocation: N$ ");
-                printf("[Validation Success] Saved Valid Budget Amount: N$ %.2f\n", sampleFinancialInput);
+                budgetMenu();
                 break;
             case 3:
                 printf("\n--- Supplier Management Module ---\n");
