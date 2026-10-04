@@ -59,7 +59,7 @@ int main() {
                 assetManagementMenu();
                 break;
             case 5:
-               reportsMenu(empSalaries, employeeCount, allocatedBudgets, actualExpenditures, deptCount);
+               reportsMenu();
                 break;
             case 6:
                 printf("\nExiting system. Local tracking session closed cleanly.\n");
