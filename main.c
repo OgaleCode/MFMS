@@ -9,26 +9,26 @@
 #include "assets.h"
 #include "reports.h"
 
+void runEmployeeMenu() {
+    int choice = 0;
+    do {
+        printf("\n--- Employee Management ---\n");
+        printf("1. Add Employee\n");
+        printf("2. Display All Employees\n");
+        printf("3. Search Employee\n");
+        printf("4. Back to Main Menu\n");
+        
+        choice = getValidInt(1, 4, "Enter choice: ");
+        
+        switch (choice) {
+            case 1: addEmployee(); break;
+            case 2: displayEmployees(); break;
+            case 3: searchEmployee(); break;
+        }
+    } while (choice != 4);
+}
+
 int main() {
-    char empIds[MAX_RECORDS][STR_LEN];
-    char empNames[MAX_RECORDS][STR_LEN];
-    float empSalaries[MAX_RECORDS];
-    int employeeCount = 0;
-
-    char deptNames[MAX_RECORDS][STR_LEN];
-    float allocatedBudgets[MAX_RECORDS];
-    float actualExpenditures[MAX_RECORDS];
-    int deptCount = 0;
-
-    char supplierIds[MAX_RECORDS][STR_LEN];
-    char supplierNames[MAX_RECORDS][STR_LEN];
-    int supplierCount = 0;
-
-    char assetIds[MAX_RECORDS][STR_LEN];
-    char assetNames[MAX_RECORDS][STR_LEN];
-    float assetValues[MAX_RECORDS];
-    int assetCount = 0;
-
     int choice = 0;
 
     do {
@@ -47,19 +47,19 @@ int main() {
 
         switch (choice) {
             case 1:
-                employeeMenu(empIds, empNames, empSalaries, &employeeCount);
+                runEmployeeMenu();
                 break;
             case 2:
-                budgetMenu(deptNames, allocatedBudgets, actualExpenditures, &deptCount);
+                budgetMenu();
                 break;
             case 3:
-                supplierMenu(supplierIds, supplierNames, &supplierCount);
+                supplierMenu();
                 break;
             case 4:
-                assetMenu(assetIds, assetNames, assetValues, &assetCount);
+                assetManagementMenu();
                 break;
             case 5:
-                reportsMenu(empSalaries, employeeCount, allocatedBudgets, actualExpenditures, deptCount);
+                reportsMenu();
                 break;
             case 6:
                 printf("\nExiting system. Local tracking session closed cleanly.\n");
