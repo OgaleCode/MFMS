@@ -75,13 +75,11 @@ void addEmployee(void)
     printf("\nEmployee added successfully.\n");
 }
 
-
 /* Calculate gross employee salary */
 float calculateSalary(float basic, float housing, float transport)
 {
     return basic + housing + transport;
 }
-
 
 /* Display all employees */
 void displayEmployees(void)
@@ -114,7 +112,6 @@ void displayEmployees(void)
                ));
     }
 }
-
 
 /* Search for an employee by ID */
 void searchEmployee(void)
