@@ -4,6 +4,6 @@
 void addEmployee(void);
 void displayEmployees(void);
 void searchEmployee(void);
-float calculateSalary(float basic, float housing, float transport):
+float calculateSalary(float basic, float housing, float transport);
 
 #endif
