@@ -17,7 +17,7 @@ void supplierMenu(void)
         printf("1. Add Supplier\n");
         printf("2. Display Suppliers\n");
         printf("3. Search Supplier\n");
-        printf("4. Exit Supplier Management\n");
+        printf("4. Return to the main menu\n");
         printf("========================================\n");
         printf("Enter your choice: ");
 
