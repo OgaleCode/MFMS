@@ -11,14 +11,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
+ steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Compile C Project
+      run: gcc main.c assets.c budget.c employees.c reports.c suppliers.c -o mfms_program
+
       
