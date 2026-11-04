@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Compile C Project
-        run: gcc -I.github/workflows .github/workflows/*.c -o mfms_program
+             run: gcc *.c -o mfms_program
+
 
 
       
