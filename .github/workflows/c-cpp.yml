@@ -12,7 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Compile C Project
-             run: gcc *.c -o mfms_program
+        run: gcc *.c -o mfms_program
+
+
+
+
 
 
 
