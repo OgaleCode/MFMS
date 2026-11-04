@@ -8,12 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile C Project
+        run: gcc .github/workflows/*.c -o mfms_program
 
- steps:
-    - uses: actions/checkout@v4
-    - name: Compile C Project
-      run: gcc main.c assets.c budget.c employees.c reports.c suppliers.c -o mfms_program
 
       
