@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "reports.h"
 #include "validation.h"
+#include "employees.h"
+
 
 void reportsMenu(void) {
     int reportChoice = 0;
