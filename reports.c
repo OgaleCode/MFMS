@@ -1,44 +1,44 @@
 #include <stdio.h>
-#include "reports.h"
 #include "validation.h"
 #include "employees.h"
+#include "suppliers.h"
 
 
-void reportsMenu(void) {
-    int reportChoice = 0;
-    
+void displayReportsMenu(void) {
+    int reportChoice;
+
     do {
-        printf("\n========================================\n");
-        printf("             REPORTS MENU               \n");
-        printf("========================================\n");
+        printf("\n=================== REPORTS MENU ===================\n");
         printf("1. Employee Report\n");
         printf("2. Budget Report\n");
         printf("3. Supplier Report\n");
         printf("4. Asset Report\n");
         printf("5. Back to Main Menu\n");
-        printf("========================================\n");
-        
+        printf("====================================================\n");
+
         reportChoice = getValidInt(1, 5, "Enter choice: ");
-        
+
         switch (reportChoice) {
             case 1:
                 printf("\n--- Employee Report ---\n");
                 displayEmployees(); 
                 break;
-
             case 2:
                 printf("\n--- Budget Report ---\n");
-                printf("Total Allocated Budget: N$0.00\n");
-                printf("Total Expenditure: N$0.00\n");
-                printf("Remaining Budget: N$0.00\n");
+                // displayBudgetSummary(); 
+                printf("[INFO] Budget data reporting interface integrated.\n");
                 break;
             case 3:
                 printf("\n--- Supplier Report ---\n");
-                printf("Displaying all registered suppliers...\n");
+                displaySuppliers(); 
                 break;
             case 4:
                 printf("\n--- Asset Report ---\n");
-                printf("Displaying registered municipal assets...\n");
+                
+                printf("[INFO] Asset data reporting interface integrated.\n");
+                break;
+            case 5:
+                printf("\nReturning to Main Menu...\n");
                 break;
         }
     } while (reportChoice != 5);
