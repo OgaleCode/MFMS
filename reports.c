@@ -23,11 +23,9 @@ void reportsMenu(void) {
         switch (reportChoice) {
             case 1:
                 printf("\n--- Employee Report ---\n");
-                printf("Total Employees: 0\n");
-                printf("Average Salary: N$0.00\n");
-                printf("Highest Salary: N$0.00\n");
-                printf("Lowest Salary: N$0.00\n");
+                displayEmployees(); 
                 break;
+
             case 2:
                 printf("\n--- Budget Report ---\n");
                 printf("Total Allocated Budget: N$0.00\n");
